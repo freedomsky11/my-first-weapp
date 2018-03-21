@@ -1,0 +1,35 @@
+<!--pages/post/post.wxml-->
+<view>
+  <text class='title'>{{ post.title }}</text>
+</view>
+<view>
+  <text class='time'>发布时间：{{ time }}</text>
+</view>
+
+<view class="item" wx:for="{{ content }}">
+  <image wx:if="{{ item.url }}" class="img" src="{{ item.url }}"></image>
+  <view wx:if="{{ item.text }}" class="text">
+    <text class="content">{{ item.text }}</text>
+  </view>
+</view>
+
+<view>
+  <text class="title">—— 其他精彩图文 ——</text>
+</view>
+
+<!-- 文章列表 -->
+<view class="item" wx:for="{{list}}">
+  <navigator url="../post/post?id={{item.id}}" hover-class="navigator-hover">
+
+    <view class="text">
+      <text class="title">{{item.title}}</text>
+      <!-- <text class="description">{{item.short_description}}</text> -->
+    </view>
+    <image class="img" src="{{item.cover}}"></image>
+  </navigator>
+</view>
+
+<navigator url="../index/index" open-type="redirectTo" hover-class="navigator-hover">
+  <button class='button1'>首页</button>
+</navigator>
+<button class='button2' open-type="share">分享</button>

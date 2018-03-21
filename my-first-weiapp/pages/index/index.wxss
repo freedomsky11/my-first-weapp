@@ -1,0 +1,47 @@
+/**index.wxss**/
+
+/* .userinfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.userinfo-avatar {
+  width: 128rpx;
+  height: 128rpx;
+  margin: 20rpx;
+  border-radius: 50%;
+}
+
+.userinfo-nickname {
+  color: #aaa;
+}
+
+.usermotto {
+  margin-top: 200px;
+} */
+
+/**index.wxss**/
+
+.swiper {
+  height: 400rpx;
+  width: 100%;
+  margin-bottom: 2rpx;
+}
+
+.swiper image {
+  height: 100%;
+  width: 100%;
+}
+
+.container {
+  padding: 0rpx 0;
+}
+
+.white {
+  color: white;
+}
+
+.img { 
+  min-width:100%;
+ }  

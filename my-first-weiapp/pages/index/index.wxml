@@ -1,0 +1,49 @@
+<!--index.wxml-->
+<view class="container">
+  <scroll-view scroll-top="{{ scrollTop }}" scroll-y="true" style="height:{{ scrollHeight }}px;" class="list" bindscrolltolower="bindDownLoad" bindscroll="scroll" bindscrolltoupper="refresh">
+
+    <!-- 轮播图 -->
+    <swiper class="swiper" indicator-dots="true" autoplay="true" interval="5000" duration="1000">
+      <block wx:for="{{ cover }}" wx:for-index="index">
+        <navigator url="../post/post?id={{ item.id }}" hover-class="navigator-hover">
+          <swiper-item>
+            <image src="{{ item.cover }}" class="slide-image" mode="aspectFill"></image>
+            <!-- <view><text class='white'>你好</text></view> -->
+          </swiper-item>
+        </navigator>
+      </block>
+    </swiper>
+
+    <!-- 文章列表 -->
+    <view class="item" wx:for="{{ list }}">
+      <navigator url="../post/post?id={{ item.id }}" hover-class="navigator-hover">
+        <image class="img" src="{{ item.cover }}"></image>
+        <!-- <view class="text"> -->
+        <!-- <text class="title">{{item.title}}</text> -->
+        <!-- <text class="description">{{item.short_description}}</text> -->
+        <!-- </view>   -->
+      </navigator>
+    </view>
+  </scroll-view>
+  <view class="body-view">
+    <loading hidden="{{hidden}}" bindchange="loadingChange">
+      加载中...
+    </loading>
+  </view>
+</view>
+
+
+
+<!--index.wxml-->
+<!-- <view class="container">
+   <view class="userinfo">
+    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
+    <block wx:else>
+      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
+      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+    </block>
+  </view>
+  <view class="usermotto">
+    <text class="user-motto">{{motto}}</text>
+  </view> 
+</view> -->

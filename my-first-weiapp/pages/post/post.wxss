@@ -1,0 +1,36 @@
+/* pages/post/post.wxss */
+
+.title {
+  align-content: center;
+  font: bold;
+  font-size: 20px;
+  font-weight: 900;
+}
+
+.time {
+  font: bold;
+  font-size: 12px;
+  font-weight: 400;
+}
+
+.img {
+  min-width: 100%;
+}
+
+.button1 {
+  background: #fff;
+  margin-top: 1.6vw;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  opacity:0.8;
+}
+
+.button2 {
+  background: #fff;
+  margin-top: 1.6vw;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  opacity:0.8;
+}
